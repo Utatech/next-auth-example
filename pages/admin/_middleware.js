@@ -9,6 +9,8 @@ export default withAuth(
     if(req.nextauth.token.userRole !== "admin") {
       return NextResponse.redirect(process.env.NEXTAUTH_URL)
     }
+    return NextResponse.next()
+
   }, 
   {
     callbacks: {
