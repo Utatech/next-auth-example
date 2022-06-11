@@ -91,11 +91,13 @@ export default function Header() {
               <a>API</a>
             </Link>
           </li>
-          <li className={styles.navItem}>
-            <Link href="/admin">
-              <a>Admin</a>
-            </Link>
-          </li>
+          {session && (
+            <li className={styles.navItem}>
+              <Link href="/admin">
+                <a>Admin</a>
+              </Link>
+            </li>
+          )}
           <li className={styles.navItem}>
             <Link href="/me">
               <a>Me</a>
