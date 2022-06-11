@@ -51,6 +51,7 @@ export default NextAuth({
       issuer: process.env.AUTH0_ISSUER,
     }),
   ],
+  secret:process.env.NEXTAUTH_SECRET,
   theme: {
     colorScheme: "light",
   },
@@ -60,7 +61,6 @@ export default NextAuth({
       return token
     },
   },
-  secret:process.env.NEXTAUTH_SECRET
   // pages: {
   //   signIn: "/auth/signin",
   // }
