@@ -56,8 +56,11 @@ export default NextAuth({
     colorScheme: "light",
   },
   callbacks: {
-    async jwt({ token }) {
-      token.userRole = "admin"
+    async jwt({ token, user, account, profile }) {
+      if(token.email == 'prawiraputra64@gmail.com' || token.email == 'wibuajib@gmail.com') {
+        token.userRole = "admin"
+      }
+      console.log('token from [...nextauth]', token);
       return token
     },
   },
