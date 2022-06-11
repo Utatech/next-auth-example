@@ -60,7 +60,7 @@ export default NextAuth({
       return token
     },
   },
-  pages: {
-    signIn: "/auth/signin",
-  }
+  // pages: {
+  //   signIn: "/auth/signin",
+  // }
 })
